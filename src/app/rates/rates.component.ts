@@ -21,9 +21,12 @@ import {
 })
 export class RatesComponent implements OnInit, DoCheck, OnChanges {
   @Input() rates: { inr: number } = { inr: 0 };
+
   oldRate = 0;
   diff = undefined;
+  // differ: any;
   differ: KeyValueDiffer<string, number>;
+
   constructor(
     private cd: ChangeDetectorRef,
     private _differ: KeyValueDiffers
