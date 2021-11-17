@@ -9,12 +9,13 @@ export class AppComponent {
   rates: { inr: number } = { inr: 0 };
 
   updateRates() {
-    const data  =  parseInt((Math.random()*100).toFixed(2))
-    
+    const data = parseInt((Math.random() * 100).toFixed(2));
     this.rates.inr = data;
   }
 
   updateRatesByReference() {
-    this.rates = { ...this.rates, inr: 70 };
+    const data = parseInt((Math.random() * 100).toFixed(2));
+
+    this.rates = { inr: data };
   }
 }
